@@ -1,57 +1,50 @@
-import { Github, Linkedin, Mail, ExternalLink, Code, Trophy, Star, Users } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code, Trophy, Star, Users, FileText, ChevronDown } from 'lucide-react';
 
 function App() {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    projectsSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const projects = [
+    {
+      title: "DNA Sequencing Lab Chatbot",
+      description: "AI-powered chatbot assisting researchers with DNA sequencing services. Features RAG architecture with sub-2-second response times and semantic search capabilities.",
+      tech: ["Next.js", "React", "FastAPI", "Python", "ChromaDB", "LangChain", "HuggingFace", "RAG", "Vector DB", "Tailwind CSS"],
+      icon: "🧬",
+      github: "https://github.com/mananb77/genai-mcb-chatbot",
+      demo: "https://mananb77.github.io/genai-mcb-chatbot/",
+      preview: "/previews/genai-chatbot.png"
+    },
     {
       title: "GradeSync",
       description: "Research project analyzing student engagement with grading systems. Published at SIGCSE 2025.",
       tech: ["Python", "Data Analysis", "Research"],
       icon: "📊",
-      github: "#",
+      github: "https://github.com/AFA-Tooling/GradeSync",
       award: "Published at SIGCSE 2025"
     },
     {
-      title: "WalkSafe at Berkeley",
-      description: "Interactive map displaying crime data to help students navigate campus safely. Won 1st place at IBM Social Good Datathon.",
-      tech: ["React", "Python", "IBM Watson", "Flask"],
-      icon: "🗺️",
-      github: "#",
-      award: "1st Place - IBM Social Good Datathon"
-    },
-    {
       title: "CourseCraft.ai",
-      description: "Full-stack application that automates course calendar creation using GPT-4 and the Berkeley API.",
-      tech: ["React", "Node.js", "GPT-4", "Berkeley API"],
+      description: "Intelligent course schedule generation platform for UC Berkeley TAs and instructors. Automates calendar creation, saving hours of administrative work with AI-assisted adaptation and multiple export formats.",
+      tech: ["React", "Flask", "Python", "Google Calendar API", "Material-UI", "OAuth 2.0", "Bootstrap"],
       icon: "📅",
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "DeepSafe",
-      description: "Deep learning system for detecting deepfake content with high accuracy.",
-      tech: ["PyTorch", "Computer Vision", "Deep Learning"],
-      icon: "🔍",
-      github: "#"
-    },
-    {
-      title: "RAG Chatbot for DNA Lab",
-      description: "Full-stack AI chatbot implementing Retrieval-Augmented Generation for lab assistance.",
-      tech: ["Python", "LangChain", "RAG", "Vector DB"],
-      icon: "🤖",
-      github: "#"
-    },
-    {
-      title: "FlowNow",
-      description: "Platform designed to enhance cognitive performance and productivity through flow state techniques.",
-      tech: ["React", "Node.js", "MongoDB"],
-      icon: "⚡",
-      github: "#"
+      github: "https://github.com/mananb77/coursecraft-ai",
+      demo: "https://mananb77.github.io/coursecraft-ai/demo",
+      preview: "/previews/coursecraft-ai.png"
     },
     {
       title: "Secure File Sharing System",
       description: "End-to-end encrypted file sharing system built with Golang implementing RSA and AES encryption.",
       tech: ["Golang", "Cryptography", "Security"],
       icon: "🔐",
+      github: "#"
+    },
+    {
+      title: "DeepSafe",
+      description: "Deep learning system for detecting deepfake content with high accuracy.",
+      tech: ["PyTorch", "Computer Vision", "Deep Learning"],
+      icon: "🔍",
       github: "#"
     },
     {
@@ -67,6 +60,14 @@ function App() {
       tech: ["PostgreSQL", "Apache Spark", "Data Engineering"],
       icon: "⚙️",
       github: "#"
+    },
+    {
+      title: "WalkSafe at Berkeley",
+      description: "Interactive map displaying crime data to help students navigate campus safely. Won 1st place at IBM Social Good Datathon.",
+      tech: ["React", "Python", "IBM Watson", "Flask"],
+      icon: "🗺️",
+      github: "#",
+      award: "1st Place - IBM Social Good Datathon"
     },
     {
       title: "MNIST & Spam Classification",
@@ -93,22 +94,23 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#00BFFF] via-[#1E90FF] to-[#4169E1]">
-      <div className="container mx-auto px-4 py-16">
-        <header className="text-center mb-16">
-          <div className="mb-6">
+      {/* Hero Section */}
+      <div className="min-h-screen flex flex-col items-center justify-center px-4">
+        <div className="text-center">
+          <div className="mb-8">
             <img
-              src="https://via.placeholder.com/150"
+              src="/profile.png"
               alt="Profile"
-              className="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-lg"
+              className="w-40 h-40 rounded-full mx-auto border-4 border-white shadow-2xl"
             />
           </div>
-          <h1 className="text-5xl font-bold text-white mb-4">
+          <h1 className="text-6xl font-bold text-white mb-4">
             Manan Bhargava
           </h1>
-          <p className="text-xl text-white/90 mb-6">
+          <p className="text-2xl text-white/90 mb-10">
             Computer Science & Data Science @ UC Berkeley
           </p>
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="flex justify-center gap-4 mb-12 flex-wrap">
             <a
               href="https://github.com/mananb77"
               target="_blank"
@@ -134,9 +136,28 @@ function App() {
               <Mail size={20} />
               Email
             </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-6 py-3 rounded-full transition-all duration-300 flex items-center gap-2"
+            >
+              <FileText size={20} />
+              Resume
+            </a>
           </div>
-        </header>
+          <button
+            onClick={scrollToProjects}
+            className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-2 mx-auto animate-bounce"
+          >
+            View Projects
+            <ChevronDown size={20} />
+          </button>
+        </div>
+      </div>
 
+      {/* Projects Section */}
+      <div className="container mx-auto px-4 py-16" id="projects">
         <section>
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Projects
@@ -151,6 +172,15 @@ function App() {
                   <div className="text-5xl mb-3">{project.icon}</div>
                   <h3 className="text-xl font-bold text-white">{project.title}</h3>
                 </div>
+                {project.preview && (
+                  <div className="w-full h-48 overflow-hidden bg-gray-100">
+                    <img
+                      src={project.preview}
+                      alt={`${project.title} preview`}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                )}
                 <div className="p-6">
                   <p className="text-gray-700 mb-4 h-20">{project.description}</p>
 
@@ -176,15 +206,19 @@ function App() {
                     {project.github && (
                       <a
                         href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex-1 bg-[#00BFFF] hover:bg-[#1E90FF] text-white px-4 py-2 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 text-sm font-medium"
                       >
                         <Code size={16} />
-                        View Code
+                        View on GitHub
                       </a>
                     )}
                     {project.demo && (
                       <a
                         href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 text-sm font-medium"
                       >
                         <ExternalLink size={16} />
@@ -198,7 +232,7 @@ function App() {
           </div>
         </section>
 
-        <footer className="mt-16 text-center text-white/80">
+        <footer className="mt-16 text-center text-white/80 pb-8">
           <p className="text-sm">
             © 2025 Manan Bhargava. Built with React & Tailwind CSS.
           </p>
