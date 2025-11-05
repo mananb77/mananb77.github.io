@@ -9,7 +9,7 @@ function App() {
   const projects = [
     {
       title: "DNA Sequencing Lab Chatbot",
-      description: "AI-powered chatbot assisting researchers with DNA sequencing services. Features RAG architecture with sub-2-second response times and semantic search capabilities.",
+      description: "AI-powered chatbot assisting researchers with DNA sequencing services. Features RAG architecture with knowledge base of proprietary MCB lab processes and data for accurate, context-aware responses.",
       tech: ["Next.js", "React", "FastAPI", "Python", "ChromaDB", "LangChain", "HuggingFace", "RAG", "Vector DB", "Tailwind CSS"],
       icon: "🧬",
       github: "https://github.com/mananb77/genai-mcb-chatbot",
