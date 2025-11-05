@@ -51,7 +51,8 @@ function App() {
       description: "End-to-end encrypted file sharing system built with Golang implementing RSA and AES encryption.",
       tech: ["Golang", "Cryptography", "Security"],
       icon: "🔐",
-      github: "#"
+      github: "https://github.com/mananb77/file-sharing-system",
+      demo: "https://mananb77.github.io/file-sharing-system/"
     },
     {
       title: "DeepSafe",
