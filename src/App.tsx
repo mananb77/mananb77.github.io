@@ -195,16 +195,16 @@ function App() {
                   </div>
                 )}
                 <div className="p-6">
-                  <p className="text-gray-700 mb-4 h-20">{project.description}</p>
+                  <p className="text-gray-700 mb-6 h-20">{project.description}</p>
 
                   {project.award && (
-                    <div className="mb-4 flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
+                    <div className="mb-6 flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
                       <Trophy className="text-amber-600 flex-shrink-0 mt-0.5" size={18} />
                       <span className="text-sm text-amber-800 font-medium">{project.award}</span>
                     </div>
                   )}
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech, i) => (
                       <span
                         key={i}
