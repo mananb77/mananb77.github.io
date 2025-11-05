@@ -91,13 +91,13 @@ function App() {
       icon: "🧠",
       github: "#"
     },
-    {
-      title: "Fossil Frenzy",
-      description: "FIRST Robotics Competition game design. Team reached Top 100 worldwide out of 4,000+ teams.",
-      tech: ["Game Design", "Robotics", "Competition"],
-      icon: "🤖",
-      award: "Top 100 Worldwide - FIRST Robotics"
-    },
+    // {
+    //   title: "Fossil Frenzy",
+    //   description: "FIRST Robotics Competition game design. Team reached Top 100 worldwide out of 4,000+ teams.",
+    //   tech: ["Game Design", "Robotics", "Competition"],
+    //   icon: "🤖",
+    //   award: "Top 100 Worldwide - FIRST Robotics"
+    // },
     {
       title: "Tweet Sentiment Analysis",
       description: "NLP model for detecting hate speech and analyzing sentiment in social media content.",
