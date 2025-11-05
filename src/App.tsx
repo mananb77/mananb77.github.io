@@ -195,7 +195,7 @@ function App() {
                   </div>
                 )}
                 <div className="p-6">
-                  <p className="text-gray-700 mb-6 h-20">{project.description}</p>
+                  <p className="text-gray-700 mb-6 min-h-24">{project.description}</p>
 
                   {project.award && (
                     <div className="mb-6 flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3">
