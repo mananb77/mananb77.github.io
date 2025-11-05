@@ -11,6 +11,7 @@ function App() {
       title: "DNA Sequencing Lab Chatbot",
       description: "AI-powered chatbot assisting researchers with DNA sequencing services. Features RAG architecture with knowledge base of proprietary MCB lab processes and data for accurate, context-aware responses.",
       tech: ["Next.js", "React", "FastAPI", "Python", "ChromaDB", "LangChain", "HuggingFace", "RAG", "Vector DB", "Tailwind CSS"],
+      categories: ["AI", "Full Stack"],
       icon: "🧬",
       github: "https://github.com/mananb77/genai-mcb-chatbot",
       demo: "https://mananb77.github.io/genai-mcb-chatbot/",
@@ -20,6 +21,7 @@ function App() {
       title: "Persona Architect",
       description: "AI-powered application that generates customized business personas. Input your business concept and interact with an AI persona tailored to your industry through an intelligent chatbot interface.",
       tech: ["React", "Lovable Cloud", "Gemini AI", "Serverless Functions", "AI Chat"],
+      categories: ["AI", "Full Stack"],
       icon: "🎭",
       demo: "https://biz-sim-bot.lovable.app/",
       preview: `${import.meta.env.BASE_URL}previews/persona-architect.png`
@@ -28,6 +30,7 @@ function App() {
       title: "GradeSync",
       description: "Educational Grade Management System for Multi-Platform Assessment Integration. Streamlines grade synchronization across multiple educational platforms.",
       tech: ["Python 3.11", "React 18", "FastAPI", "Grade Management", "Educational Technology"],
+      categories: ["Full Stack", "Research"],
       icon: "📊",
       github: "https://github.com/mananb77/gradesync-demo",
       demo: "https://mananb77.github.io/gradesync-demo/",
@@ -40,6 +43,7 @@ function App() {
       title: "CourseCraft.ai",
       description: "Intelligent course schedule generation platform for UC Berkeley TAs and instructors. Automates calendar creation, saving hours of administrative work with AI-assisted adaptation and multiple export formats.",
       tech: ["React", "Flask", "Python", "Google Calendar API", "Material-UI", "OAuth 2.0", "Bootstrap"],
+      categories: ["AI", "Full Stack"],
       icon: "📅",
       github: "https://github.com/mananb77/coursecraft-ai",
       demo: "https://mananb77.github.io/coursecraft-ai/demo",
@@ -50,6 +54,7 @@ function App() {
       title: "Secure File Sharing System",
       description: "End-to-end encrypted file sharing system built with Golang implementing RSA and AES encryption.",
       tech: ["Golang", "Cryptography", "Security"],
+      categories: ["Backend", "Security"],
       icon: "🔐",
       github: "https://github.com/mananb77/file-sharing-system",
       demo: "https://mananb77.github.io/file-sharing-system/",
@@ -59,6 +64,7 @@ function App() {
       title: "DeepSafe",
       description: "Deep learning system for detecting deepfake content with high accuracy.",
       tech: ["PyTorch", "Computer Vision", "Deep Learning"],
+      categories: ["AI", "Machine Learning"],
       icon: "🔍",
       github: "#"
     },
@@ -66,6 +72,7 @@ function App() {
       title: "Faulty Commit Classification",
       description: "Machine learning model to classify software commits as faulty or non-faulty.",
       tech: ["Python", "Scikit-learn", "ML"],
+      categories: ["Machine Learning", "Data Science"],
       icon: "🐛",
       github: "#"
     },
@@ -73,6 +80,7 @@ function App() {
       title: "PostgreSQL vs Apache Spark",
       description: "Comprehensive comparison of data processing performance between PostgreSQL and Apache Spark.",
       tech: ["PostgreSQL", "Apache Spark", "Data Engineering"],
+      categories: ["Data Engineering", "Research"],
       icon: "⚙️",
       github: "#"
     },
@@ -80,6 +88,7 @@ function App() {
       title: "WalkSafe at Berkeley",
       description: "Interactive map displaying crime data to help students navigate campus safely. Won 1st place at IBM Social Good Datathon.",
       tech: ["React", "Python", "IBM Watson", "Flask"],
+      categories: ["AI", "Full Stack"],
       icon: "🗺️",
       github: "#",
       award: "1st Place - IBM Social Good Datathon"
@@ -88,6 +97,7 @@ function App() {
       title: "MNIST & Spam Classification",
       description: "Machine learning models for handwritten digit recognition and email spam detection.",
       tech: ["Python", "TensorFlow", "ML"],
+      categories: ["Machine Learning", "Data Science"],
       icon: "🧠",
       github: "#"
     },
@@ -102,6 +112,7 @@ function App() {
       title: "Tweet Sentiment Analysis",
       description: "NLP model for detecting hate speech and analyzing sentiment in social media content.",
       tech: ["Python", "NLP", "Machine Learning"],
+      categories: ["Machine Learning", "NLP"],
       icon: "💬",
       github: "#"
     }
@@ -197,6 +208,18 @@ function App() {
                   </div>
                 )}
                 <div className="p-6">
+                  {project.categories && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.categories.map((category, i) => (
+                        <span
+                          key={i}
+                          className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wide shadow-md"
+                        >
+                          {category}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <p className="text-gray-700 mb-6 min-h-24">{project.description}</p>
 
                   {project.award && (
