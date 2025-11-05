@@ -17,6 +17,13 @@ function App() {
       preview: `${import.meta.env.BASE_URL}previews/genai-chatbot.png`
     },
     {
+      title: "Persona Architect",
+      description: "AI-powered application that generates customized business personas. Input your business concept and interact with an AI persona tailored to your industry through an intelligent chatbot interface.",
+      tech: ["React", "Lovable Cloud", "Gemini AI", "Serverless Functions", "AI Chat"],
+      icon: "🎭",
+      demo: "https://biz-sim-bot.lovable.app/"
+    },
+    {
       title: "GradeSync",
       description: "Research project analyzing student engagement with grading systems. Published at SIGCSE 2025.",
       tech: ["Python", "Data Analysis", "Research"],
