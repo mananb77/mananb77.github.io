@@ -101,7 +101,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#00BFFF] via-[#1E90FF] to-[#4169E1]">
+    <div className="min-h-screen bg-gradient-to-br from-[#00BFFF] via-[#1e90ff] to-[#1e3a8a]">
       {/* Hero Section */}
       <div className="min-h-screen flex flex-col items-center justify-center px-4">
         <div className="text-center">
@@ -116,7 +116,7 @@ function App() {
             Manan Bhargava
           </h1>
           <p className="text-2xl text-white/90 mb-10">
-            Computer Science & Data Science @ UC Berkeley
+            Alumni of Computer Science & Data Science @ UC Berkeley
           </p>
           <div className="flex justify-center gap-4 mb-12 flex-wrap">
             <a
@@ -176,7 +176,7 @@ function App() {
                 key={index}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="bg-gradient-to-br from-[#00BFFF] to-[#1E90FF] p-6 text-center">
+                <div className="bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] p-6 text-center">
                   <div className="text-5xl mb-3">{project.icon}</div>
                   <h3 className="text-xl font-bold text-white">{project.title}</h3>
                 </div>
@@ -203,7 +203,7 @@ function App() {
                     {project.tech.map((tech, i) => (
                       <span
                         key={i}
-                        className="bg-[#00BFFF]/10 text-[#00BFFF] px-3 py-1 rounded-full text-sm font-medium"
+                        className="bg-[#3b82f6]/10 text-[#2563eb] px-3 py-1 rounded-full text-sm font-medium"
                       >
                         {tech}
                       </span>
@@ -216,7 +216,7 @@ function App() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-[#00BFFF] hover:bg-[#1E90FF] text-white px-4 py-2 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 text-sm font-medium"
+                        className="flex-1 bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 text-sm font-medium"
                       >
                         <Code size={16} />
                         View on GitHub
