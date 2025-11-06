@@ -80,11 +80,13 @@ function App() {
     },
     {
       title: "Faulty Commit Classification",
-      description: "Machine learning model to classify software commits as faulty or non-faulty.",
-      tech: ["Python", "Scikit-learn", "ML"],
-      categories: ["Machine Learning", "Data Science"],
+      description: "Deep learning system for predicting buggy software commits using neural networks. End-to-end ML pipeline featuring data preprocessing, neural network architectures, and comprehensive evaluation on 120K+ Git commits.",
+      tech: ["PyTorch", "Python", "Neural Networks", "scikit-learn", "Pandas", "NumPy", "Deep Learning"],
+      categories: ["Machine Learning", "Deep Learning"],
       icon: "🐛",
-      github: "#"
+      github: "https://github.com/mananb77/faulty-commit-classifier",
+      demo: "https://mananb77.github.io/faulty-commit-classifier/",
+      preview: `${import.meta.env.BASE_URL}previews/faulty-commit-classification.png`
     },
     {
       title: "PostgreSQL vs Apache Spark",
