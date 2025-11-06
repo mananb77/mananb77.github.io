@@ -40,6 +40,16 @@ function App() {
       paper: `${import.meta.env.BASE_URL}gradesync-2-pager.pdf`
     },
     {
+      title: "Othello Computer Vision",
+      description: "Computer vision system for automatic detection and analysis of Othello board game states. Processes images and videos to extract game positions, track moves, and generate game state strings using OpenCV.",
+      tech: ["Python", "OpenCV", "Computer Vision", "NumPy", "scikit-learn", "HSV Masking"],
+      categories: ["Computer Vision", "Machine Learning"],
+      icon: "⚫",
+      github: "https://github.com/gamescrafters/gamescrafters-othello-cv",
+      demo: "https://mananb77.github.io/gamescrafters-othello-cv/",
+      preview: `${import.meta.env.BASE_URL}previews/othello-cv.png`
+    },
+    {
       title: "CourseCraft.ai",
       description: "Intelligent course schedule generation platform for UC Berkeley TAs and instructors. Automates calendar creation, saving hours of administrative work with AI-assisted adaptation and multiple export formats.",
       tech: ["React", "Flask", "Python", "Google Calendar API", "Material-UI", "OAuth 2.0", "Bootstrap"],
