@@ -45,7 +45,7 @@ function App() {
       tech: ["Python", "OpenCV", "Computer Vision", "NumPy", "scikit-learn", "HSV Masking"],
       categories: ["Computer Vision", "Machine Learning"],
       icon: "⚫",
-      github: "https://github.com/gamescrafters/gamescrafters-othello-cv",
+      github: "https://github.com/mananb77/gamescrafters-othello-cv",
       demo: "https://mananb77.github.io/gamescrafters-othello-cv/",
       preview: `${import.meta.env.BASE_URL}previews/othello-cv.png`
     },
