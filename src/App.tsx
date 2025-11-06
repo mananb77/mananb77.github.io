@@ -133,9 +133,19 @@ function App() {
           <h1 className="text-6xl font-bold text-white mb-4">
             Manan Bhargava
           </h1>
-          <p className="text-2xl text-white/90 mb-10">
+          <p className="text-2xl text-white/90 mb-6">
             Alumni of Computer Science & Data Science @ UC Berkeley
           </p>
+          <div className="flex justify-center gap-3 mb-10 flex-wrap max-w-3xl mx-auto">
+            {["AI Engineering", "Backend Engineering", "Full Stack Development", "Machine Learning", "Data Engineering", "Research"].map((expertise, i) => (
+              <span
+                key={i}
+                className="bg-white/20 backdrop-blur-md border border-white/30 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-lg hover:bg-white/30 transition-all duration-300"
+              >
+                {expertise}
+              </span>
+            ))}
+          </div>
           <div className="flex justify-center gap-4 mb-12 flex-wrap">
             <a
               href="https://github.com/mananb77"
