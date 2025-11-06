@@ -84,8 +84,8 @@ function App() {
       tech: ["PyTorch", "Python", "Neural Networks", "scikit-learn", "Pandas", "NumPy", "Deep Learning"],
       categories: ["Machine Learning", "Deep Learning"],
       icon: "🐛",
-      github: "https://github.com/mananb77/faulty-commit-classifier",
-      demo: "https://mananb77.github.io/faulty-commit-classifier/",
+      github: "https://github.com/mananb77/faulty-commit-neural-network",
+      demo: "https://mananb77.github.io/faulty-commit-neural-network/",
       preview: `${import.meta.env.BASE_URL}previews/faulty-commit-classification.png`
     },
     {
