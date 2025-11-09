@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ExternalLink, Code, Trophy, Star, Users, FileText, ChevronDown, BookOpen } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code, Trophy, FileText, ChevronDown, BookOpen } from 'lucide-react';
 
 function App() {
   const scrollToProjects = () => {
@@ -90,11 +90,13 @@ function App() {
     },
     {
       title: "PostgreSQL vs Apache Spark",
-      description: "Comprehensive comparison of data processing performance between PostgreSQL and Apache Spark.",
-      tech: ["PostgreSQL", "Apache Spark", "Data Engineering"],
+      description: "Comprehensive analysis of the Yelp Open Dataset comparing relational (PostgreSQL) vs distributed (Apache Spark) data processing. Analyzed millions of reviews, users, and businesses with performance benchmarking and query optimization.",
+      tech: ["PostgreSQL", "Apache Spark", "Python", "Pandas", "SQL", "DataFrames", "ETL", "Big Data"],
       categories: ["Data Engineering", "Research"],
       icon: "⚙️",
-      github: "#"
+      github: "https://github.com/mananb77/postgres-spark",
+      demo: "https://mananb77.github.io/postgres-spark/",
+      preview: `${import.meta.env.BASE_URL}previews/postgres-spark.png`
     },
     {
       title: "WalkSafe at Berkeley",
